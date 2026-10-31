@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Panda Mobile">
+<title>Reader demo — The case for a hybrid browser</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 0; color: #17171a; background: #fff; }
+  nav, .ad, aside, footer { padding: 10px 20px; background: #eee; }
+  article { max-width: 720px; margin: 0 auto; padding: 20px; font-family: Georgia, serif; font-size: 19px; line-height: 1.65; }
+  h1 { font-family: system-ui, sans-serif; font-size: 32px; line-height: 1.15; }
+  .byline { color: #6b6b73; font-family: system-ui, sans-serif; font-size: 14px; }
+  blockquote { border-left: 3px solid #ccc; margin-left: 0; padding-left: 18px; color: #555; }
+  pre { background: #f4f4f6; padding: 12px; overflow: auto; }
+  .ad { color: #b00; font-weight: bold; }
+</style>
+</head>
+<body>
+<nav><a href="home.html">Home</a> · <a href="home.html">Back to start</a></nav>
+<div class="ad">ADVERTISEMENT: this block must disappear in reader mode.</div>
+<article>
+  <h1>Reader demo — The case for a hybrid browser</h1>
+  <p class="byline">By the Panda Mobile team</p>
+  <p>Lightpanda is a headless browser written in Zig. It implements a DOM, JavaScript through V8, networking through libcurl, and both CDP and WebDriver BiDi servers. It is designed for automation, extraction and AI agents.</p>
+  <p>What it does not have is a graphical renderer. Its PNG and PDF output is a text-only rendering, with no compositor, no interactive scrolling and no CSS paint for the real mobile web. That makes a literal one-to-one Android clone a renderer project, not a port.</p>
+  <h2>The hybrid alternative</h2>
+  <p>Keep Chromium's WebView for pixels and touch, and use a Lightpanda-style engine for extraction and automation. This page exists so you can try the extraction path: open the menu and choose Reader mode. Navigation, advertisements, the sidebar and the footer should vanish, leaving the article.</p>
+  <blockquote>A good reader mode is a small, honest example of what a headless engine can contribute to a mobile browser.</blockquote>
+  <p>The extractor scores paragraph containers, picks the best subtree, removes boilerplate, whitelists readable tags and makes links and images absolute. It also removes duplicate headings and bylines.</p>
+  <p>For the native port, the app keeps a narrow JNI contract and a loopback CDP boundary. That keeps the engine replaceable and the UI stable while V8, Bionic and the Zig toolchain are brought up for Android.</p>
+  <pre><code>./gradlew :app:assembleDebug</code></pre>
+  <ul>
+    <li>WebView renders and handles input.</li>
+    <li>The reader pipeline extracts the article.</li>
+    <li>A future native core handles automation.</li>
+  </ul>
+</article>
+<aside><p>Related: this sidebar must not appear in the reader view, even though it contains a long sentence that could score points in a naive extractor.</p></aside>
+<footer>Copyright — footer content must be removed.</footer>
+<div class="ad">SECOND ADVERTISEMENT: also removed.</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#FFF7F7F9</color>
+    <color name="toolbar">#FFFFFFFF</color>
+    <color name="urlbar">#FFF0F0F3</color>
+    <color name="chip">#FFEDEDF0</color>
+    <color name="chip_active">#FFDDE7FF</color>
+    <color name="text">#FF17171A</color>
+    <color name="text_muted">#FF6B6B73</color>
+    <color name="accent">#FF2962FF</color>
+    <color name="divider">#FFE2E2E7</color>
+    <color name="icon_disabled">#FFBDBDC4</color>
+</resources>

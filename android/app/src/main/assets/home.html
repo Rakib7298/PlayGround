@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panda Mobile</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f7f7f9;
+    --card: #ffffff;
+    --text: #17171a;
+    --muted: #6b6b73;
+    --accent: #2962ff;
+    --line: #e2e2e7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f0f12;
+      --card: #17171c;
+      --text: #f2f2f5;
+      --muted: #a0a0aa;
+      --accent: #8ab4ff;
+      --line: #2b2b33;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 48px 20px 40px;
+  }
+  .logo {
+    font-size: 44px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  h1 {
+    margin: 0 0 6px;
+    font-size: 28px;
+    letter-spacing: -0.02em;
+  }
+  .tagline {
+    margin: 0 0 28px;
+    color: var(--muted);
+    font-size: 15px;
+  }
+  form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+  input {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--card);
+    color: var(--text);
+    padding: 13px 14px;
+    font-size: 16px;
+    outline: none;
+  }
+  input:focus { border-color: var(--accent); }
+  button {
+    border: 0;
+    border-radius: 12px;
+    background: var(--accent);
+    color: #fff;
+    padding: 0 18px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  a {
+    display: block;
+    padding: 14px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--card);
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  a span {
+    display: block;
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  .foot {
+    margin-top: 32px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="logo">🐼</div>
+  <h1>Panda Mobile</h1>
+  <p class="tagline">An independent Android shell for the Lightpanda port study.</p>
+
+  <form onsubmit="location.href='https://duckduckgo.com/?q='+encodeURIComponent(document.getElementById('q').value);return false;">
+    <input id="q" type="search" placeholder="Search the web" autocomplete="off">
+    <button type="submit">Go</button>
+  </form>
+
+  <div class="links">
+    <a href="https://en.wikipedia.org/wiki/Web_browser">Wikipedia<span>Free encyclopedia</span></a>
+    <a href="https://news.ycombinator.com/">Hacker News<span>Tech discussion</span></a>
+    <a href="https://github.com/lightpanda-io/browser">Lightpanda<span>Upstream repository</span></a>
+    <a href="https://lightpanda.io/docs">Lightpanda docs<span>Engine documentation</span></a>
+    <a href="reader-demo.html">Reader demo<span>Try the extraction path</span></a>
+  </div>
+
+  <p class="foot">
+    Rendering is provided by the Android WebView (Chromium). Lightpanda itself is a
+    headless engine and does not include a graphical renderer or an Android target.
+    Use the menu for reader mode, desktop site, bookmarks and engine details.
+  </p>
+</main>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Panda Mobile</string>
+    <string name="url_hint">Search or type a URL</string>
+    <string name="new_tab">New tab</string>
+    <string name="untitled">Untitled</string>
+    <string name="menu_new_tab">New tab</string>
+    <string name="menu_reload">Reload</string>
+    <string name="menu_share">Share page</string>
+    <string name="menu_desktop">Desktop site</string>
+    <string name="menu_javascript">JavaScript</string>
+    <string name="menu_reader">Reader mode</string>
+    <string name="menu_bookmark">Bookmark this page</string>
+    <string name="menu_bookmarks">Bookmarks</string>
+    <string name="menu_downloads">Downloads</string>
+    <string name="menu_engine">Engine info</string>
+    <string name="menu_about">About</string>
+    <string name="back">Back</string>
+    <string name="forward">Forward</string>
+    <string name="reload">Reload</string>
+    <string name="menu">Menu</string>
+    <string name="close_tab">Close tab</string>
+    <string name="add_tab">New tab</string>
+    <string name="download_started">Download started</string>
+    <string name="download_failed">Could not start download</string>
+    <string name="download_unsupported">This download type is not supported yet</string>
+    <string name="reader_failed">Could not extract a readable article from this page</string>
+    <string name="bookmark_saved">Bookmark saved</string>
+    <string name="bookmark_exists">Already bookmarked</string>
+    <string name="no_bookmarks">No bookmarks yet</string>
+    <string name="bookmarks_title">Bookmarks</string>
+    <string name="remove_all">Remove all</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+</resources>
